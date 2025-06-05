@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "71071098405",
+    "project_id": "silentsos-d6e21",
+    "storage_bucket": "silentsos-d6e21.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71071098405:android:d09223982306356a97c1cc",
+        "android_client_info": {
+          "package_name": "com.example.first_flutter_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf-xwqsp9zgiiDOQb-LbqYkigj3SGoz1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+name: silentsos_plus
+description: "SilentSOS+ is a dual-mode emergency alert app for both public/medical and covert personal threats, with Firebase backend and React.js admin panel."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Firebase core for initializing Firebase
+  firebase_core: ^3.13.1
+
+  # Firebase authentication for user login (optional for SilentSOS+)
+  firebase_auth: ^5.5.3
+
+  # Firebase Cloud Firestore for real-time alert data
+  cloud_firestore: ^5.6.0
+
+  # Firebase Realtime Database (if you prefer it over Firestore)
+  firebase_database: ^11.3.5
+
+  # Firebase Cloud Messaging for push notifications to admins/users
+  firebase_messaging: ^15.2.5
+
+  # Firebase Storage if you're storing images/audio
+  firebase_storage: ^12.0.0
+
+  # Shared Preferences for local settings (e.g., PIN, silent mode settings)
+  shared_preferences: ^2.5.3
+
+  # Image picker (in case you want to allow users to upload images)
+  image_picker: ^1.1.2
+
+  # HTTP client for external APIs (optional but handy)
+  http: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
