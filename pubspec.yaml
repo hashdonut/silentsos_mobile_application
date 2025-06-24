@@ -1,6 +1,10 @@
-name: silentsos_plus
-description: "SilentSOS+ is a dual-mode emergency alert app for both public/medical and covert personal threats, with Firebase backend and React.js admin panel."
-publish_to: 'none'
+name: silentsos_mobile_application
+description: >
+  SilentSOS+ is a dual-mode emergency alert app for both public/medical and covert personal threats,
+  with Firebase backend and React.js admin panel.
+
+publish_to: 'none' # This app won't be published to pub.dev
+
 version: 1.0.0+1
 
 environment:
@@ -9,34 +13,40 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+
+
+
+  # 🌈 UI & Material
   cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.3
 
-  # Firebase core for initializing Firebase
+  # 🔥 Firebase Core & Services
   firebase_core: ^3.13.1
-
-  # Firebase authentication for user login (optional for SilentSOS+)
   firebase_auth: ^5.5.3
-
-  # Firebase Cloud Firestore for real-time alert data
-  cloud_firestore: ^5.6.0
-
-  # Firebase Realtime Database (if you prefer it over Firestore)
+  cloud_firestore: ^5.6.9
   firebase_database: ^11.3.5
-
-  # Firebase Cloud Messaging for push notifications to admins/users
-  firebase_messaging: ^15.2.5
-
-  # Firebase Storage if you're storing images/audio
+  firebase_messaging: ^15.2.7
   firebase_storage: ^12.0.0
+  intl: ^0.18.1
+  timeago: ^3.3.0
+  flutter_animate: ^4.3.0
+  url_launcher: ^6.2.6  # or the latest version
+  app_settings: ^5.1.1
+  android_intent_plus: ^4.0.1
 
-  # Shared Preferences for local settings (e.g., PIN, silent mode settings)
-  shared_preferences: ^2.5.3
+  # 🌍 Location & Sensors
+  geolocator: ^14.0.1
+  battery_plus: ^5.0.1
+  permission_handler: ^11.0.1
 
-  # Image picker (in case you want to allow users to upload images)
-  image_picker: ^1.1.2
+  # 🗺️ Google Maps
+  google_maps_flutter: ^2.5.0
 
-  # HTTP client for external APIs (optional but handy)
+  # 🛠️ Utilities
   http: ^1.4.0
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -45,4 +55,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
