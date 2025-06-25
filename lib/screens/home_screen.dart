@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'calculator_disguise.dart';
 import 'profile_screen.dart';
 import 'settings_screen.dart';
 import 'map_screen.dart';
@@ -55,6 +55,18 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('SilentSOS+', style: TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold)),
         backgroundColor: Colors.deepPurple.shade400,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.calculate_outlined),
+            tooltip: 'Open Calculator',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const CalculatorDisguise()),
+              );
+            },
+          ),
+        ],
       ),
       body: _currentIndex == 0 ? _buildHomeBody() : _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

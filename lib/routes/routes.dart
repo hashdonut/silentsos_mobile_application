@@ -13,6 +13,7 @@ import '../screens/change_pin_screen.dart';
 import '../screens/enterpinscreen.dart';
 import '../screens/forgot_pin_screen.dart';
 import '../screens/faq_screen.dart';
+import '../screens/calculator_disguise.dart';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -31,6 +32,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const ForgotPinScreen());
       case RouteNames.authGate:
         return MaterialPageRoute(builder: (_) => const AuthGate());
+      case RouteNames.calculatorDisguise:
+        return MaterialPageRoute(builder: (_) => const CalculatorDisguise());
     }
 
     // Protected routes

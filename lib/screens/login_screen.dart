@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'enterpinscreen.dart';
+import 'calculator_disguise.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -212,6 +213,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: _showForgotPasswordDialog,
                   child: const Text(
                     'Forgot password?',
+                    style: TextStyle(
+                      color: Colors.deepPurple,
+                      fontWeight: FontWeight.w500,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+                TextButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const CalculatorDisguise()),
+                    );
+                  },
+                  icon: const Icon(Icons.calculate_outlined, color: Colors.deepPurple),
+                  label: const Text(
+                    'Open Calculator',
                     style: TextStyle(
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.w500,

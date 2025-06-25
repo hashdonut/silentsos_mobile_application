@@ -11,6 +11,7 @@ class RouteNames {
   static const authGate = '/'; // ✅ Needed for initial route
   static const String enterPin = '/enter-pin';
   static const forgotPin = '/forgot-pin';
+  static const calculatorDisguise = '/calculator-disguise';
 
 
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'home_screen.dart';
+import 'calculator_disguise.dart';
 import 'forgot_pin_screen.dart';
 
 class EnterPinScreen extends StatefulWidget {
@@ -136,6 +137,18 @@ class _EnterPinScreenState extends State<EnterPinScreen> {
         title: Text(_isFirstTime ? "Set PIN" : "Enter PIN"),
         backgroundColor: const Color(0xFF6A5ACD),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.calculate),
+            tooltip: 'Open Calculator',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const CalculatorDisguise()),
+              );
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(32.0),
