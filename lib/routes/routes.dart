@@ -14,6 +14,10 @@ import '../screens/enterpinscreen.dart';
 import '../screens/forgot_pin_screen.dart';
 import '../screens/faq_screen.dart';
 import '../screens/calculator_disguise.dart';
+import '../screens/verify_email_screen.dart';
+import '../screens/helper_home_screen.dart';
+import '../screens/helper_profile_screen.dart';
+import '../screens/helper_settings_screen.dart';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -34,6 +38,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const AuthGate());
       case RouteNames.calculatorDisguise:
         return MaterialPageRoute(builder: (_) => const CalculatorDisguise());
+      case RouteNames.verify:
+        return MaterialPageRoute(builder: (_) => const VerifyEmailScreen());
     }
 
     // Protected routes
@@ -54,6 +60,9 @@ class AppRoutes {
       RouteNames.settings,
       RouteNames.changePin,
       RouteNames.faq,
+      RouteNames.helperHome,
+      RouteNames.helperProfile,
+      RouteNames.helperSettings,
     ].contains(name);
   }
 
@@ -67,6 +76,12 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const ChangePinScreen());
       case RouteNames.faq:
         return MaterialPageRoute(builder: (_) => const FAQScreen());
+      case RouteNames.helperHome:
+        return MaterialPageRoute(builder: (_) => const HelperHomeScreen());
+      case RouteNames.helperProfile:
+        return MaterialPageRoute(builder: (_) => const HelperProfileScreen());
+      case RouteNames.helperSettings:
+        return MaterialPageRoute(builder: (_) => const HelperSettingsScreen());
       default:
         return _unknownRoute(name);
     }

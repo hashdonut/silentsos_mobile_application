@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import '../routes/route_names.dart';
 import 'enterpinscreen.dart';
 import 'calculator_disguise.dart';
 
@@ -76,10 +77,13 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (!mounted) return;
 
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const EnterPinScreen()),
-      );
+      final role = userDoc.data()?['role'] ?? 'user';
+
+      if (role == 'ngo_helper') {
+        Navigator.pushReplacementNamed(context, RouteNames.helperHome);
+      } else {
+        Navigator.pushReplacementNamed(context, RouteNames.enterPin);
+      }
     } on FirebaseAuthException catch (e) {
       setState(() {
         _error = e.message ?? "Invalid login credentials.";
